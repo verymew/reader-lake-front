@@ -16,53 +16,57 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 9, 112, 49),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/background-login.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/vitoria-regia-1.png',
-                width: 150,
-                height: 150,
-              ),
-              DefaultInput(
-                labelText: "Login",
-                hidden: false,
-                hintText: "hintText",
-                controller: usernameController,
-              ),
-              DefaultInput(
-                labelText: "Senha",
-                hidden: false,
-                hintText: "hintText",
-                controller: passwordController,
-              ),
-              ElevatedButton(
+      backgroundColor: Color.fromRGBO(229, 255, 230, 1.0),
+      body: Form(
+        key: _formKey,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/vitoria-regia-1.png',
+              width: 100,
+              height: 100,
+            ),
+            DefaultInput(
+              labelText: "Login",
+              hidden: false,
+              hintText: "hintText",
+              controller: usernameController,
+            ),
+            DefaultInput(
+              labelText: "Senha",
+              hidden: false,
+              hintText: "hintText",
+              controller: passwordController,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 15),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: const Color(0xFF183D11),
+                ),
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // Process data.
-                  }
+                  // if (_formKey.currentState!.validate()) {}
                 },
-                style: ButtonStyle(),
-                child: const Text("data"),
+                child: const Text(
+                  "Entrar",
+                  style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                ),
               ),
-              TextButton(
-                style: ButtonStyle(),
-                onPressed: () {},
-                child: const Text("Criar nova conta"),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                "Criar nova conta",
+                style: TextStyle(color: Color.fromRGBO(22, 37, 23, 1)),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -54,6 +54,7 @@ flutter:
   assets:
       - assets/images/background-login.png
       - assets/images/vitoria-regia-1.png
+      - assets/images/reeds.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

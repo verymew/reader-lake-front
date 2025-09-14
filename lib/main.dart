@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:readerlake/features/authentication/presentation/login_screen/login_page.dart';
+import 'package:readerlake/features/authentication/presentation/screens/login_page.dart';
 
 void main() {
   runApp(const MyApp());

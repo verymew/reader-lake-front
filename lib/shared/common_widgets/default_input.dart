@@ -17,7 +17,7 @@ class DefaultInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 28),
       child: TextFormField(
         validator: (String? value) {
           if (value == null || value.isEmpty) {
@@ -29,6 +29,7 @@ class DefaultInput extends StatelessWidget {
         obscureText: hidden,
         decoration: InputDecoration(
           border: const OutlineInputBorder(),
+          contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
           labelText: labelText,
           labelStyle: const TextStyle(
             color: Color.fromARGB(255, 6, 51, 2),
@@ -37,7 +38,7 @@ class DefaultInput extends StatelessWidget {
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: Color.fromARGB(255, 3, 48, 1),
-              width: 2.0,
+              width: 1.2,
             ),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
